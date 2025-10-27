@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing page2</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-saira: "saira", sans-seriff;
+        --font-Righteous: "Righteous", sans-seriff;
+        --color-course-blue: #0e38cd;
+        --color-course-darkblue: #477ae3;
+        --color-course-violet: #931bbd;
+        --color-course-lightgreen: #dbedff;
+        --color-course-purple: #e441ff;
+        --color-course-white: #f7f7f7;
+        --color-course-blu: #1901f8;
+        --color-course-lightpurple: #7F56D9;
+        --color-course-light: #D9ECFF;
+        --color-course-gray: #4E596B;
+        --color-course-blue1: #083F9B;
+         --color-course-purple1:#7F56D9;
+         --color-course-social:#0351AE;
+
+      }
+
+       @utility container{
+         center:true;
+         padding:1rem;
+         screens:{
+          lg:"1124px",
+          xl:"1124px",
+          2xl:"1124px"
+         }
+      }
+    </style>
+    <!-- Google fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,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"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-Righteous">
+    <!-- header / navigation part -->
+    <heder>
+      <nav class="container flex items-center py-4 mt-4 sm:mt-12px">
+        <div class="py-1">
+          <img src="assets/logo.svg" alt="Logo" />
+        </div>
+        <ul
+          class="hidden sm:flex flex-1 justify-end items-center gap-13 text-md"
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Contact</a></li>
+          <div>
+            <img src="assets/Group 1.svg" />
+          </div>
+          <li class="underline"><a href="#">Login</a></li>
+          <button type="button" class="bg-course-blue text-white px-7 py-3">
+            Signup
+          </button>
+        </ul>
+        <div class="flex sm:hidden flex-1 justify-end">
+          <i class="text-3xl fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </heder>
+    <!-- hero section -->
+    <section
+      class="container mt-0 pt-15 h-screen w-screen bg-gradient-to-bl from-blue-900 to-purple-400"
+    >
+      <div class="flex flex-col-reverse lg:flex-row item-center">
+        <!-- left side -->
+        <div class="flex flex-1 flex-col items-center lg:items-start pl-15">
+          <p class="text-course-white">Successful coaches are visionaries</p>
+          <h1
+            class="text-course-white md:text-3xl lg:text-4xl text-center lg:text-left mb-6"
+          >
+            Good <span class="text-course-blu">coaching</span> is<br />
+            good teaching &<br />
+            nothing else.
+          </h1>
+          <div class="mt-15 flex gap-10 items-center">
+            <button
+              type="button"
+              class="text-white border rounded-lg px-7 py-3"
+            >
+              View Courses
+            </button>
+            <p class="text-course-white">Get Free Consultation</p>
+          </div>
+          <div class="relative w-130 mt-13 flex items-center space-x-4">
+            <input
+              type="text"
+              placeholder="What do you want to learn today?"
+              class="relative h-14 flex-grow px-4 py-2 rounded bg-course-white"
+              />
+             <button type="button" class="absolute h-10  left-88 flex items-center space-x-2 px-8  bg-course-lightpurple text-course-white rounded-lg font-normal">
+             <img src="assets/search.svg"/>
+              <span>Search</span>
+              
+            </button> 
+          </div>
+        </div>
+        <!-- right side -->
+         <div class="flex justify-end  lg:flex lg:ml-32 lg:items-center">
+          <div class="absolute top-85 w-122 h-122 bg-white/80 blur-3xl rounded-full"></div> 
+          <img class=" relative right-30 bg-opacity-1 w-150 h-150 sm:h-130 w-130 md:w-full md-h-full z-10 w-[350px] object-cover" src="assets/woman-fotor-bg-remover-202510262432.png" alt="Woman image" />
+          
+          </div> 
+         </div>
+      <div>
+      <div class=" absolute left-157 h-45  w-42 top-157 border border-b-blue-700 border-course-white rounded-t-full"></div>
+       <div class=" absolute left-166 h-35 top-167 w-24 border border-b-blue-700 border-course-white border  rounded-t-full"></div>
+       <div class=" absolute left-162 h-40 top-162 w-32 border border-b-blue-700 border-course-white border-dashed  rounded-t-full"></div> 
+    </div>
+    </section>
+
+      <!--end of the hero section-->
+      <section>
+      <div class="container bg-gradient-to-bl from-blue-700 to-fuchsia-600">
+    <div class ="flex justify-center items-center gap-20  pt-10 ">
+      <img class="" src="assets/spotify.png" alt="spotify"/>
+      <img src="assets/amazon.png" alt="Amazon"/>
+      <img src="assets/spotify.png" alt="spotify"/>
+      <img src="assets/cisco.png" alt="Cisco"/>
+      <img src="assets/logitech.png" alt="Logitech"/>
+      <img src="assets/amazon.png" alt="amazon"/>
+    </div>
+    </div>
+  </section>
+    
+  
+
+    <!--Featured course-->
+    <section class="container bg-course-light">
+    <div class="text-center p-5">
+      <h1 class="text-2xl p-5" >Featured <span class="text-course-blu">Course</span></h1>
+      <p class="text-sm">THE FEATURE COURSES ARE WE INVENTED OUR TEACHING PART</p>
+     </div>
+     <!--common div-->
+     <div class="mt-25 font-saira grid grid-cols-1 sm:grid-col-2 lg:grid-cols-3 gap-7 p-8 sm:flex-row">
+      <!--card1-->
+      <div class="h-103 w-95 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <div >
+          <img class="h-60 w-95" src="assets/motion graphics.png" alt="Motion Graphics">
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between ">
+          <p class="text-course-gray font-saira text-sm">1,957 Students</p>
+          <span class="text-course-gray font-saira text-sm">01h 59m</span>
+          </div>
+          <h3 class="mt-3 font-semibold">Motion Graphics:Create a Nice<br>Typography Animation</h3>
+          <div class="mt-8 flex justify-between">
+            <p class="font-saira ">RS.499</p>
+            <span><img src="assets/basket.svg" alt="Basket"> </span>
+          </div>
+        </div>
+      </div>
+      <!--card1 end-->
+
+      
+      <!--card2-->
+      <div class="h-103 w-95 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <div >
+          <img class="h-60 w-95" src="assets/advancephp.png" alt="Advance Php">
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between ">
+          <p class="text-course-gray font-saira text-sm">9,575 Students</p>
+          <span class="text-course-gray font-saira text-sm">01h 59m</span>
+          </div>
+          <h3 class="mt-3 font-semibold">Advance PHP knowledge with JS to<br>make smart web</h3>
+          <div class="mt-8 flex justify-between">
+            <p class="font-saira ">RS.499</p>
+            <span><img src="assets/basket.svg" alt="Basket"> </span>
+          </div>
+        </div>
+      </div>
+      <!--card2 end-->
+
+      <!--card3-->
+      <div class="h-103 w-95 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <div >
+          <img class="h-60 w-95" src="assets/education.png" alt="Education software">
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between ">
+          <p class="text-course-gray font-saira text-sm">2957 Students</p>
+          <span class="text-course-gray font-saira text-sm">02h 49m</span>
+          </div>
+          <h3 class=" mt-3 font-semibold">Education Software and PHP and JS<br>System Script</h3>
+          <div class="mt-8 flex justify-between">
+            <p class="font-saira ">RS.499</p>
+            <span><img src="assets/basket.svg" alt="Basket"> </span>
+          </div>
+        </div>
+      </div>
+      <!--card3 end-->
+
+      <!--card4-->
+      <div class="h-103 w-95 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <div >
+          <img class="h-60 w-95" src="assets/financial .png" alt="Financial Analyst">
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between ">
+          <p class="text-course-gray font-saira text-sm">5,457 Students</p>
+          <span class="text-course-gray font-saira text-sm">01h 49m</span>
+          </div>
+          <h3 class=" mt-3 font-semibold">The Complete Financial Analyst<br>Training & Investing</h3>
+          <div class="mt-8 flex justify-between">
+            <p class="font-saira ">RS.499</p>
+            <span><img src="assets/basket.svg" alt="Basket"> </span>
+          </div>
+        </div>
+      </div>
+      <!--card4 end-->
+
+      <!--card5-->
+      <div class="h-103 w-95 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <div >
+          <img class="h-60 w-95" src="assets/marketing.png" alt="Marketing">
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between ">
+          <p class="text-course-gray font-saira text-sm">595 Students</p>
+          <span class="text-course-gray font-saira text-sm">01h 49m</span>
+          </div>
+          <h3 class=" mt-3 font-semibold">Marketing 2023:Complete Guide To<br>Instagram Growth</h3>
+          <div class="mt-8 flex justify-between">
+            <p class="font-saira ">RS.499</p>
+            <span><img src="assets/basket.svg" alt="Basket"> </span>
+          </div>
+        </div>
+      </div>
+      <!--card5 end-->
+
+      <!--card6-->
+      <div class="h-103 w-95 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <div >
+          <img class="h-60 w-95" src="assets/3d model.png" alt="3D modelling">
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between ">
+          <p class="text-course-gray font-saira text-sm">458 Students</p>
+          <span class="text-course-gray font-saira text-sm">03h 00m</span>
+          </div>
+          <h3 class=" mt-3 font-semibold">Learn 3D Modelling and Design<br>for Beginners</h3>
+          <div class="mt-8 flex justify-between">
+            <p class="font-saira ">RS.499</p>
+            <span><img src="assets/basket.svg" alt="Basket"> </span>
+          </div>
+        </div>
+      </div>
+      <!--card6 end-->
+
+    </div> 
+    <button type="button" class="bg-gradient-to-br from-course-blue1 to-course-purple1 text-white px-2  mb-15 ml-40 lg:mb-15 ml-140 px-7 py-3 mt-10 ">Explore Courses</button>
+    </section>
+
+    <!-- end of featured course-->
+
+    <!--Why learn-->
+    <section class="container mt-5 bg-gradient-to-tr from-blue-300 to-blue-900 text-white ">
+      <!--top text-->
+       <div class="text-center p-5 ">
+        <h1 class="text-2xl">Why <span class="text-course-blue">learn </span> with our courses?</h1>
+        <p class="mt-5 font-saira">We are providing the best courses and top classes.And<br> extradinery placement training.....</p>
+       </div>
+       <div >
+      <div class=" absolute mt-0 left-0 h-40 w-24  border border-l-blue-700 border-course-white rounded-r-full"></div>
+       <div class=" absolute mt-3 left-0 h-35  w-15 border border-l-blue-700 border-course-white border  rounded-r-full"></div>
+       <div class=" absolute mt-2 left-0 h-36  w-20 border border-l-blue-700 border-course-white border-dashed  rounded-r-full"></div> 
+    </div>
+       <!--bottom -->
+       <div class="mt-15  p-20 grid cols-1 sm:grid-col-2 md:grid-cols-5">
+
+        <div>
+          <img class="justify-center" src="assets/learn.svg" alt="Learn">
+          <h1 class="text-sm font-medium">01. Learn</h1> 
+          <p class="text-sm font-normal mt-4">Learn continually. There is always<br>“one more thing”to learn.</p>
+        </div>
+        <!-- Divider -->
+      <div class="hidden md:block border-l-3 border-white/50 border-dotted mx-auto h-40">
+      </div>
+
+        <div>
+          <img src="assets/graduate.svg" alt="Graduate">
+          <h1 class="text-sm font-normal">02. Graduate</h1> 
+          <p class="text-sm font-normal mt-4">Be bold,be courageous,<br>be your best.</p>
+        </div>
+         <!-- Divider -->
+      <div class="hidden md:block border-l-3 border-white/50 border-dotted mx-auto h-40">
+      </div>
+
+        <div>
+          <img src="assets/work.svg" alt="Work">
+          <h1 class="text-sm font-normal">03. Work</h1>
+          <p class="text-sm font-normal mt-4">Great companies are built in<br>the office,with hard work put<br>in by team.</p>
+        </div>
+       
+       </div>
+      
+    </section>
+    <!--end of why learn-->
+
+    <!--Top categories-->
+    <section class="bg-gradient-to-t from-course-lightgreen via-white to-white-60">
+
+    <div class="text-center mt-10">
+      <h1 class="font-semibold text-2xl">Top Categories</h1>
+      <p class="p-2 text-course-gray">100+ unique online course list designs</p>
+    </div>
+    <!--cards-->
+    <div class="p-15 mb-20 mt-10 gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+      <!--Card 1-->
+      <div class="h-80 w-45 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <img class="h-20 w-20 mt-7 ml-12" src="assets/digital.svg" alt="Digital marketing">
+        <h3 class="mt-7 text-center">Digital<br> Marketing</h3>
+        <p class="text-center mt-7 text-course-gray text-sm">25 Courses</p>
+      </div>
+      <!--card1 end-->
+ 
+      <!--card-2 -->
+      <div class="h-80 w-45 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <img class="h-20 w-20 mt-7 ml-12" src="assets/web.svg" alt="Web Development">
+        <h3 class="mt-7 text-center">Web<br> Development</h3>
+        <p class="text-center mt-7 text-course-gray text-sm">16 Courses</p>
+      </div>
+      <!--card-2 end-->
+
+      <!--card-3 -->
+      <div class="h-80 w-45 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <img class="h-20 w-20 mt-7 ml-12" src="assets/art.svg" alt="Art & Humanities">
+        <h3 class="mt-7 text-center">Art &<br> Humanities</h3>
+        <p class="text-center mt-7 text-course-gray text-sm">76 Courses</p>
+      </div>
+      <!--card-3 end-->
+
+       <!--card-4 -->
+      <div class="h-80 w-45 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <img class="h-20 w-20 mt-7 ml-12" src="assets/personal.svg" alt="Personal Development">
+        <h3 class="mt-7 text-center">Personal<br> Development</h3>
+        <p class="text-center mt-7 text-course-gray text-sm">22 Courses</p>
+      </div>
+      <!--card-4 end-->
+
+      <!--card-5 -->
+      <div class="h-80 w-45 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <img class="h-20 w-20 mt-7 ml-12" src="assets/IT.svg" alt="IT and Software">
+        <h3 class="mt-7 text-center">IT and<br> Software</h3>
+        <p class="text-center mt-7 text-course-gray text-sm">110 Courses</p>
+      </div>
+      <!--card-5 end-->
+
+      <!--card-6 -->
+      <div class="h-80 w-45 bg-course-white shadow-2xl rounded-lg flex flex-col gap-4 hover:shadow-lg hover:scale-105 transition-transform duration-300">
+        <img class="h-20 w-20 mt-7 ml-12" src="assets/graphic.svg" alt="IT and Software">
+        <h3 class="mt-7 text-center">Graphic<br> Design</h3>
+        <p class="text-center mt-7 text-course-gray text-sm">85 Courses</p>
+      </div>
+      <!--card-6 end-->
+
+    </div>
+
+    </section>
+    <!--end of Top categories-->
+
+    <!--Subscribe-->
+    <section class="container mt-10">
+
+      <div class="relative m-45 h-80 w-240 bg-gradient-to-l from-fuchsia-600 to-blue-300 text-center text-course-white py-10 rounded-lg">
+        <img class="absolute left-10" src="assets/subL1.svg"/>
+        <img class="absolute left-40 top-32 " src="assets/subL2.svg" />
+        <img class="absolute left-10 top-53" src="assets/subL3.svg" />
+
+        <img class="absolute left-210 " src="assets/subR1.svg"/>
+        <img class="absolute left-183 top-32" src="assets/subR2.svg" class=""/>
+        <img class="absolute left-210 top-53" src="assets/subR3.svg" class=""/>
+   <h1 class=" mt-7 text-2xl text-center">Subscribe For Get Updates<br/> Every New Course</h1><br>
+<p class="font-light text-sm text-center">20k+ students daily learn with Eduvi. Subscribe for new courses</p>
+ <div>  
+   <form class=" relative mt-10 ml-10 flex justify-center items-center">
+              <input type="text" class= " w-110 bg-white/20 border border-none text-white placeholder-white/80 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Enter your email" />
+              <button class="absolute right-60 w-35  bg-blue-600 text-white px-6 py-2 rounded-r  hover:bg-blue-700 transition">Subscribe</button>
+            </form>
+      </div>     
+          </div>
+          
+          </section>
+          <!--end of Subscribe-->
+       
+          <!--Video part-->
+          <section class="relative">
+           <div class="flex justify-center py-12 relative" >
+            <img class="h-130 w-240 " src="assets/womencenter.png" alt="Woman"/>
+        
+            <img class="absolute left-158 top-58 h-35 w-40 " src="assets/play.svg" alt="Play"/>
+              <img class="absolute h-50 w-70 left-246 top-95" src="assets/banner_right.png.png" alt="Banner Right"/>
+            </div>
+           
+       </section>
+            <!--end of video part-->
+
+            <!--Testimonials-->
+                <section class="container text-center bg-course-lightgreen py-16">
+    <h2 class="text-2xl font-semibold text-course-blu mb-2">Testimonials</h2>
+    <p class="text-gray-500 mb-10">What our students say about us</p>
+
+    <div class=" relative grid grid-cols-1 md:grid-cols-3 gap-8 px-15 mt-20 mb-20">
+      <!-- Testimonial 1 -->
+      <div class="bg-white relative top-10 w-98 top p-6 shadow-lg ">
+        <img class="absolute bottom-30 left-45" src="assets/testimonials.svg"/> 
+        <p class="text-gray-600 text-xs mt-4 mb-4">Such an amazing traniner and easily understand the entire<br>syllabus, and the guidence will be super and good to the way<br> of explaning.</p>
+        
+        <p class="text-yellow-500 mt-2">★★★★★</p>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="bg-white absolute left-108 w-98  p-6 z-10 shadow-lg">
+        <img class="absolute bottom-30 left-45" src="assets/testimonials.svg"/> 
+        <p class="text-gray-600 text-xs mt-4 mb-4">Such an amazing traniner and easily understand the entire<br>syllabus, and the guidence will be super and good to the way<br> of explaning.</p>
+        
+        <p class="text-yellow-500 mt-2">★★★★★</p>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="bg-white top-10 relative w-98 left-87 p-6 shadow-lg ">
+        <img class="absolute bottom-30 left-45" src="assets/testimonials.svg"/>   
+        <p class="text-gray-600 text-xs mt-4 mb-4">Such an amazing traniner and easily understand the entire<br>syllabus, and the guidence will be super and good to the way<br> of explaning.</p>
+        
+        <p class="text-yellow-500 mt-2">★★★★★</p>
+      </div>
+    </div>
+    <div class="flex justify-end items-center mt-16">
+      <img src="assets/left Arrow.svg">
+      <img src="assets/rightArrow.svg">
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="container bg-gradient-to-r from-purple-600 to-indigo-600 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
+
+      <!-- Connect -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Connect</h3>
+        <img src="assets/logo_preview_rev_1.png" alt="Logo" />
+        <p class="text-sm">
+          Sri Jagannath Nivas,8-1-164/345/A/1,<br>
+Pragati Colony, Mailardevpally, Nawab<br>
+Saheb Kunta, Hyd, 500005
+        </p>
+      </div>
+
+      <!-- Classes -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Classes</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Classroom Courses</a></li>
+          <li><a href="#" class="hover:underline">Virtual Classroom Courses</a></li>
+          <li><a href="#" class="hover:underline">E-learning Courses</a></li>
+          <li><a href="#" class="hover:underline">Video Courses</a></li>
+          <li><a href="#" class="hover:underline">Offline Courses</a></li>
+        </ul>
+      </div>
+
+      <!-- Community -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Community</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Learners</a></li>
+          <li><a href="#" class="hover:underline">Partners</a></li>
+          <li><a href="#" class="hover:underline">Developers</a></li>
+          <li><a href="#" class="hover:underline">Transactions</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Professional Education</a></li>
+          <li><a href="#" class="hover:underline">Courses</a></li>
+          <li><a href="#" class="hover:underline">Admissions</a></li>
+          <li><a href="#" class="hover:underline">Testimonial</a></li>
+          <li><a href="#" class="hover:underline">Programs</a></li>
+        </ul>
+      </div>
+
+      <!-- More -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">More</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Press</a></li>
+          <li><a href="#" class="hover:underline">Investors</a></li>
+          <li><a href="#" class="hover:underline">Terms</a></li>
+          <li><a href="#" class="hover:underline">Privacy</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+</footer>
+
+    <!-- End of Footer Section -->
+
+    <!-- Social Icons -->
+    <div class="container h-10 w-full bg-course-social flex justify-center space-x-6">
+     <div class="rounded-full bg-course-white"> <img src="assets/Instagram.svg" alt="Instagram"/></div>
+     <div class="rounded-full bg-course-white"> <img src="assets/WhatsApp.svg" alt="Whatsapp"/></div>
+     <div class="rounded-full bg-course-white"> <img src="assets/Twitter.svg" alt="Twitter" /></div>
+     <div class="rounded-full bg-course-white"> <img src="assets/LinkedIn.svg" alt="LinkedIn" /></div>
+     <div class="rounded-full bg-course-white"> <img src="assets/YouTube.svg" alt="YouTube" /></div>
+    </div>
+
+    <!-- Copyright -->
+    <p class="container text-center text-sm bg-blue-700">
+      Copyright © 2023 askmeidentity. All Rights Reserved.
+    </p>
+  
+
+
+
+
+
+
+  
+
+
+
+
+   
+    </body>
+</html>
